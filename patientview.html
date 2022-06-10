@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FauxMD Patient</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@300;400;500&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container my-3 patient-bg">
+        <span class="d-flex align-items-end logo">
+            <h1 class="faux">Faux</h1>
+            <h1 class="MD">MD</h1>
+            <span class="d-flex patient-logo">
+                <h4>Patient View</h4>
+            </span>
+        </span>
+        <span class="d-flex justify-content-end sign-out">
+            <a href="index.html">Sign Out</a>
+        </span>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-xl-4 m-3 patient-info item-box">
+                <h4 class="mb-4 mt-2 box-title">Patient Info</h4>
+                <h6>Patient ID: <span class="jstext" id="patientid"></span></h6>
+                <h6>Name: <span class="jstext" id="patientname"></span></h6>
+                <h6>Birthdate: <span class="jstext" id="patientbirthdate"></span></h6>
+                <h6>Address: <span class="jstext" id="patientaddress"></span></h6></h6>
+                <h6>Phone: <span class="jstext" id="patientphone"></span></h6>
+            </div>
+            <div class="col-md-4 col-xl-2 m-3 health-info item-box">
+                <h4 class="mb-4 mt-2 box-title">Health Info</h4>
+                <h6>Sex: <span class="jstext" id="patientsex"></span></h6>
+                <h6>Height: <span class="jstext" id="patientheight"></span></h6>
+                <h6>Weight: <span class="jstext" id="patientweight"></span></h6>
+                <p class="smalltext"><svg xmlns="http://www.w3.org/2000/svg" width="0.75rem" height="0.75rem" fill="currentColor"
+                        class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg> Information updated from most recent clinic visit.</p>
+            </div>
+            <div class="col-md-5 col-xl-2 m-3 recent-lab item-box">
+                <h4 class="mb-4 mt-2 box-title">Recent Lab Report</h4>
+                <h6>Date: <span class="jstext" id="patientlabdate"></span></h6>
+                <h6>Results: <a href="./Sample Lab Test.pdf" target="_blank">lab-results.pdf</a></h6>
+            </div>
+            <div class="col-md-5 col-xl-2 m-3 next-appt item-box">
+                <h4 class="mb-4 mt-2 box-title">Next Appointment</h4>
+                <h6>Date: <span class="jstext" id="patientnextdate"></span></h6>
+                <p class="smalltext">Contact your clinic to make any changes regarding your next visit.</p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 m-3 medication item-box">
+                <h4 class="mb-4 mt-2 box-title">Medication</h4>
+            </div>
+            <div class="col-lg-7 m-3 recent-visit item-box">
+                <h4 class="mb-4 mt-2 box-title">Recent Visit Information</h4>
+                <div class="row d-flex">
+                    <div class="col-sm-4">
+                        <h6>Date: <span class="jstext" id="patientvisitdate"></span></h6>
+                    </div>
+                    <div class="col-sm-4">
+                        <h6>Physician: <span class="jstext" id="patientdoctor"></span></h6>
+                    </div>
+                </div>
+                <h6>Notes:</h6>
+                <div class="container mb-3 recent-visit-notes">
+                    <p class="visit-notes" id="patientnotes"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+
+</html>
