@@ -7,7 +7,7 @@ body {
 /* Login page CSS */
 
 .login-bg {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     background-image: url(images/login-background.jpg);
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@ body {
 
 @media (max-width: 768px) {
     .login-bg {
-        height: 125vh;
+        min-height: 125vh;
     }
 }
 
@@ -31,7 +31,7 @@ body {
     background-color: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 5px 10px 1px rgba(46,68,80,0.5);
     height: fit-content;
-    width: 80%;
+    width: 85%;
     border-radius: 0.5rem;
 }
 
@@ -186,6 +186,37 @@ body {
     color: #2e4450;
     font-family: 'Montserrat', sans-serif;
     max-width: 90%;
+}
+
+.medication-box {
+    display: flex;
+    align-items: center;
+    background-color: #e6efff;
+    height: 2rem;
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #2e4450;
+}
+
+.medication-box p {
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #2e4450;
+}
+
+.flag {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.flag-button {
+    border: 1px solid #2e4450;
+    background-color: #ffd9d9;
+    border-radius: 0.25rem;
 }
 
 .recent-visit {

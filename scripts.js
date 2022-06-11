@@ -11,7 +11,7 @@ const patients = [
         "height": "5'11",
         "weight": "187",
         "sex": "male",
-        "medication": [],
+        "medication": [["Atorvastatin", "40mg"], ["Hydrochlorothiazide", "25mg"], ["Folic Acid", "1mg"], ["Metformin", "850mg"], ["Glipizide", "10mg"], ["Lovastatin", "50mg"]],
         "visitdate": "4/03/2022",
         "doctor": "Dr. Jason Merritt",
         "visitnotes": "Blood pressure: 132/84. Pulse 74 bpm. Patient came in for routine checkup. Blood pressure is marginally lower compared to previous visit. This is a sign that the medication has been helping in regards to patient's high blood pressure. Blood pressure is still higher than would like. Patient is advised to return for another checkup in 6 months to make sure medication is still lowering blood pressure. Results of lab report show higher than normal cholesterol and blood sugar levels. Patient is advised to alter diet to reduce these levels. Rest of report is normal. Medication dosages unchanged.",
@@ -30,7 +30,7 @@ const patients = [
         "height": "5'3",
         "weight": "142",
         "sex": "female",
-        "medication": [],
+        "medication": [["Azithromycin", "250mg"], ["Naproxen", "500mg"], ["Alprazolam", "0.5mg"], ["Ferrous Sulfate", "300mg"]],
         "visitdate": "2/24/22",
         "doctor": "Dr. Jason Merritt",
         "visitnotes": "Blood pressure: 120/75. Pulse 68 bpm. Patient came in with cold symptoms, fever, and irritation in back of throat. Further analysis showed swollen lymph nodes in the neck. Conclusions is that patient has strep throat. Prescribed antibiotics to be taken over a 5 day period. Patient is advised to check back in with clinic if symptoms do not improve over the next 48 hours.",
@@ -89,6 +89,24 @@ if (patientFound) {
     document.getElementById('patientlabdate').innerHTML = patients[index].labtestdate;
     document.getElementById('patientvisitdate').innerHTML = patients[index].visitdate;
     document.getElementById('patientnextdate').innerHTML = patients[index].nextvisit;
+    for (let i = 0; i < patients[index].medication.length; i++) {
+        let temp = document.createElement("div");
+        temp.classList.add("container");
+        temp.classList.add("medication-box");
+        let p = document.createElement("p");
+        p.innerHTML = `${patients[index].medication[i][0]} (${patients[index].medication[i][1]})`;
+        let span = document.createElement("span");
+        span.classList.add("flag");
+        let flag = document.createElement("img");
+        flag.src = "images/flag.svg";
+        let button = document.createElement("button");
+        button.classList.add("flag-button");
+        button.appendChild(flag);
+        span.appendChild(button);
+        temp.appendChild(p);
+        temp.appendChild(span);
+        document.getElementById('medication').appendChild(temp);
+    }
     document.getElementById('patientdoctor').innerHTML = patients[index].doctor;
     document.getElementById('patientnotes').innerHTML = patients[index].visitnotes;
 }
