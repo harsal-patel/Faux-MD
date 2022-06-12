@@ -4,6 +4,11 @@ body {
     background-color: #527c88;
     position: absolute;
     width: 100%;
+    background-image: url(images/login-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
 }
 
 /* Login page CSS */
@@ -11,13 +16,8 @@ body {
 .login-bg {
     min-height: 100vh;
     width: 100%;
-    background-image: url(images/login-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    position: absolute;
-    background-attachment: fixed;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
 }
