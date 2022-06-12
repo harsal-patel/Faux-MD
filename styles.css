@@ -8,12 +8,13 @@ body {
 
 .login-bg {
     min-height: 100vh;
-    max-width: 100%;
+    width: 100%;
     background-image: url(images/login-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    position: relative;
+    position: absolute;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
