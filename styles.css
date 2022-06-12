@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #527c88;
-    min-height: 100%;
 }
 
 /* Login page CSS */
@@ -15,7 +14,6 @@ body {
     background-size: cover;
     background-position: top center;
     position: relative;
-    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
