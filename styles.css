@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #527c88;
-    position: relative;
+    min-height: 100%;
 }
 
 /* Login page CSS */
