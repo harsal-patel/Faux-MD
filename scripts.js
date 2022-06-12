@@ -77,6 +77,12 @@ function validatePhysician(form) {
     }
 }
 
+function flagMedicine() {
+    if (confirm("Would you like to flag this medication as incorrect?")) {
+        alert("Medication has been successfully flagged!");
+    }
+}
+
 if (patientFound) {
     document.getElementById('patientid').innerHTML = patients[index].id;
     document.getElementById('patientname').innerHTML = `${patients[index].firstname} ${patients[index].lastname}`;
@@ -101,6 +107,7 @@ if (patientFound) {
         flag.src = "images/flag.svg";
         let button = document.createElement("button");
         button.classList.add("flag-button");
+        button.onclick = flagMedicine;
         button.appendChild(flag);
         span.appendChild(button);
         temp.appendChild(p);

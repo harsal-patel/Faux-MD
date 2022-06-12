@@ -22,7 +22,7 @@ body {
 
 @media (max-width: 768px) {
     .login-bg {
-        min-height: 125vh;
+        min-height: 140vh;
     }
 }
 
@@ -222,6 +222,11 @@ body {
 
 .flag-button:hover {
     background-color: #f3b5b5;
+    transform: scale(1.05);
+}
+
+.flag-button:active {
+    transform: none;
 }
 
 .recent-visit {
