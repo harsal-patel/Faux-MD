@@ -33,7 +33,7 @@ body {
 
 @media (max-width: 768px) {
     .login-bg {
-        min-height: 140vh;
+        min-height: 120vh;
     }
     .login-overlay {
         width: 90%;
@@ -232,6 +232,28 @@ body {
 
 .flag-button:active {
     transform: none;
+}
+
+.close-modal {
+    background-color: #e77575;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.close-modal:hover {
+    background-color: #ae3535;
+    color: #ffffff;
+}
+
+.submit-modal {
+    background-color: #4ac58a;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit-modal:hover {
+    background-color: #188b53;
+    color: #ffffff;
 }
 
 .recent-visit {
