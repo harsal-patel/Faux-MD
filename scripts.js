@@ -78,11 +78,21 @@ function validatePhysician(form) {
 }
 
 if (patientFound) {
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let yyyy = today.getFullYear();
+
     document.getElementById('patientid').innerHTML = patients[index].id;
     document.getElementById('patientname').innerHTML = `${patients[index].firstname} ${patients[index].lastname}`;
     document.getElementById('patientbirthdate').innerHTML = patients[index].birthdate;
     document.getElementById('patientaddress').innerHTML = `${patients[index].street}, ${patients[index].citystatezip}`;
     document.getElementById('patientphone').innerHTML = patients[index].phone;
+    let age = parseInt(yyyy) - parseInt(patients[index].birthdate.substring(6, 10));
+    if (parseInt(patients[index].birthdate.substring(0, 2)) > parseInt(mm) || (parseInt(patients[index].birthdate.substring(0, 2)) == parseInt(mm) && parseInt(patients[index].birthdate.substring(3, 5)) > parseInt(dd))) {
+        age--;
+    }
+    document.getElementById('patientage').innerHTML = age;
     document.getElementById('patientsex').innerHTML = patients[index].sex;
     document.getElementById('patientheight').innerHTML = patients[index].height;
     document.getElementById('patientweight').innerHTML = patients[index].weight;
