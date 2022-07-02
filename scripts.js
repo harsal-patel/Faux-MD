@@ -12,7 +12,7 @@ const patients = [
         "weight": "187",
         "sex": "male",
         "medication": [["Atorvastatin", "40mg"], ["Hydrochlorothiazide", "25mg"], ["Folic Acid", "1mg"], ["Metformin", "850mg"], ["Glipizide", "10mg"], ["Lovastatin", "50mg"]],
-        "visitdate": "4/03/2022",
+        "visitdate": "04/03/2022",
         "doctor": "Dr. Jason Merritt",
         "visitnotes": "Blood pressure: 132/84. Pulse 74 bpm. Patient came in for routine checkup. Blood pressure is marginally lower compared to previous visit. This is a sign that the medication has been helping in regards to patient's high blood pressure. Blood pressure is still higher than would like. Patient is advised to return for another checkup in 6 months to make sure medication is still lowering blood pressure. Results of lab report show higher than normal cholesterol and blood sugar levels. Patient is advised to alter diet to reduce these levels. Rest of report is normal. Medication dosages unchanged.",
         "labtestdate": "03/23/2022",
@@ -31,7 +31,7 @@ const patients = [
         "weight": "142",
         "sex": "female",
         "medication": [["Azithromycin", "250mg"], ["Naproxen", "500mg"], ["Alprazolam", "0.5mg"], ["Ferrous Sulfate", "300mg"]],
-        "visitdate": "2/24/22",
+        "visitdate": "02/24/22",
         "doctor": "Dr. Jason Merritt",
         "visitnotes": "Blood pressure: 120/75. Pulse 68 bpm. Patient came in with cold symptoms, fever, and irritation in back of throat. Further analysis showed swollen lymph nodes in the neck. Conclusions is that patient has strep throat. Prescribed antibiotics to be taken over a 5 day period. Patient is advised to check back in with clinic if symptoms do not improve over the next 48 hours.",
         "labtestdate": "12/18/21",
@@ -80,7 +80,7 @@ function validatePhysician(form) {
 if (patientFound) {
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
-    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let mm = String(today.getMonth() + 1).padStart(2, '0');
     let yyyy = today.getFullYear();
 
     document.getElementById('patientid').innerHTML = patients[index].id;
