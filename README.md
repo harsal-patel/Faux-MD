@@ -14,5 +14,6 @@ Password: password1
 **Patient ID and Password are case sensitive**
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://imgur.com/zJuMNIr.jpg)
 
+![App Screenshot](https://imgur.com/m4i6z4m.jpg)
